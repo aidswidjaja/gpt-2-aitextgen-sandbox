@@ -1,0 +1,196 @@
+Welcome to fish, the friendly interactive shell
+Type `help` for instructions on how to use fish
+adrian@PotatoLinux ~> cat /sys/devices/system/cpu/cp0/cpufreq/scaling_available_governors
+cat: /sys/devices/system/cpu/cp0/cpufreq/scaling_available_governors: No such file or directory
+adrian@PotatoLinux ~ [1]> cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors
+
+performance powersave
+adrian@PotatoLinux ~> echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+[sudo] password for adrian:           
+performance
+adrian@PotatoLinux ~> cd git/gpt-2-aitextgen-sandbox/
+adrian@PotatoLinux ~/g/gpt-2-aitextgen-sandbox (main)> ls
+aitextgen/  aitextgen.tokenizer.json  LICENSE  main.py*  README.txt  speeches.txt  trained_model/
+adrian@PotatoLinux ~/g/gpt-2-aitextgen-sandbox (main)> python3 main.py
+[00:00:00] Pre-processing files (0 Mo)              ██████████████████████████████████████████████████████████████████████████████████████████████████                100%
+[00:00:00] Tokenize words                           ██████████████████████████████████████████████████████████████████████████████████████████████████ 6270     /     6270
+[00:00:00] Count pairs                              ██████████████████████████████████████████████████████████████████████████████████████████████████ 6270     /     6270
+[00:00:00] Compute merges                           ██████████████████████████████████████████████████████████████████████████████████████████████████ 743      /      743
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1142/1142 [00:00<00:00, 10603.24it/s]
+/home/adrian/.local/lib/python3.8/site-packages/torch/cuda/__init__.py:52: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 9010). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at  /pytorch/c10/cuda/CUDAFunctions.cpp:115.)
+  return torch._C._cuda_getDeviceCount() > 0
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+/home/adrian/.local/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:105: UserWarning: The dataloader, train dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 4 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+  0%|                                                                                                                                           | 0/50000 [00:00<?, ?it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+5,000 steps reached: saving model to /trained_model                                                                                                                       
+5,000 steps reached: generating sample texts.                                                                                                                             
+==========                                                                                                                                                                
+, I asked to American my feelter him. And I want to feelage to be the American people to be a sit down because the people of procession of essential bill. I have been dramating my housanden by the muths
+==========                                                                                                                                                                
+10,000 steps reached: saving model to /trained_model                                                                                                                      
+10,000 steps reached: generating sample texts.                                                                                                                            
+==========                                                                                                                                                                
+, and it is away the programs. It is not designed to begined to begin all finished by fear or independence, citizens, be task -- that we will gain the world to threaten the o
+==========                                                                                                                                                                
+Loss: 2.330 — Avg: 2.264:  24%|███████████████████████▎                                                                           | 11780/50000 [23:29<1:16:12,  8.36it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+15,000 steps reached: saving model to /trained_model                                                                                                                      
+15,000 steps reached: generating sample texts.                                                                                                                            
+==========                                                                                                                                                                
+ the whole family; formanshing the good women in pain of this kind of Sixon, the struggle, the fiscrock, the promism, the globe -- the kept, the mism, the hat            
+==========                                                                                                                                                                
+20,000 steps reached: saving model to /trained_model                                                                                                                      
+20,000 steps reached: generating sample texts.                                                                                                                            
+==========                                                                                                                                                                
+, not for the first woman, if only might step in this country of this country has earned, I called no life. And that I'm not suggest yet to have the President government can afford to find us.
+
+We'm afr
+==========                                                                                                                                                                
+Loss: 1.760 — Avg: 1.834:  47%|███████████████████████████████████████████████▌                                                     | 23560/50000 [46:25<52:05,  8.46it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+25,000 steps reached: saving model to /trained_model                                                                                                                      
+25,000 steps reached: generating sample texts.                                                                                                                            
+==========                                                                                                                                                                
+ us. We must finally believe that. We believe that they are never believe we can patchiolent proce, but proceeding and will and will of us.                               
+The comes only a larger siently changes in which paid by these Army
+==========                                                                                                                                                                
+30,000 steps reached: saving model to /trained_model                                                                                                                      
+30,000 steps reached: generating sample texts.                                                                                                                            
+==========                                                                                                                                                                
+s that in 1984840,000 dollars or any other father is not about.7, I of my sleep, would not be the American people for my prayers to give me when Iific't be: recognize that the court
+==========                                                                                                                                                                
+35,000 steps reached: saving model to /trained_model                                                                                                                      
+35,000 steps reached: generating sample texts.                                                                                                                            
+==========                                                                                                                                                                
+. We must learn to take this curn the question. We are so that everything to the sym. That we're not to assist to find our the heart of the American entire future.       
+Tonight, I not the right not to pr
+==========                                                                                                                                                                
+Loss: 1.630 — Avg: 1.655:  71%|█████████████████████████████████████████████████████████████████████▉                             | 35340/50000 [1:09:49<28:57,  8.44it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+40,000 steps reached: saving model to /trained_model                                                                                                                      
+40,000 steps reached: generating sample texts.                                                                                                                            
+==========                                                                                                                                                                
+.                                                                                                                                                                         
+In this monastic generation is very much. But it can be one will be helped by nation instead of the gun outstanding city, will be end, where somehackest makes, the hold for the land to someone
+==========                                                                                                                                                                
+45,000 steps reached: saving model to /trained_model                                                                                                                      
+45,000 steps reached: generating sample texts.                                                                                                                            
+==========                                                                                                                                                                
+. We have love our missing, our governmentss live in platform here. We must higher grow by shared bit of our government and to stoods and to deposits and immediate opinaps the right of fre
+==========                                                                                                                                                                
+Loss: 1.570 — Avg: 1.557:  94%|█████████████████████████████████████████████████████████████████████████████████████████████▎     | 47120/50000 [1:33:03<05:41,  8.44it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+50,000 steps reached: saving model to /trained_model                                                                                                                      
+50,000 steps reached: generating sample texts.                                                                                                                            
+==========                                                                                                                                                                
+ and the future, there's another city, a brighter side something-stex, understand a glimpir than silence, "Good, a hill." And it's a checking about the failure for all, less
+==========                                                                                                                                                                
+Loss: 1.530 — Avg: 1.533: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 50000/50000 [1:38:41<00:00,  8.44it/s]
+The same, but only a little different. Of course Democrats of our systead of promise in 1985, it would have been designed to call attemptively systematically -- when they are to do.
+But
+==========
+The same, but only a little different. Onne hundred armored scope there would be to believe in the wayspestrism with all threathold nident and loans and love national noration to decided just as
+==========
+The same, but only a little different. Once better ullar and blacker and ofts, which infliction, which in sport, I among the people that there have been gone, are in the people of you have been deny
+==========
+The same, but only a little different. For if the most intelligent summ can resolve depose its shaping and all and all of its people, and all communications and all of all full confidence, ought to be
+==========
+The same, but only a little different. For Negroes is at ronely 50 years we carried afflupping the ver-termost-Every months of Exechrans, Democrats can act. Our
+==========
+The same, but only a little different. Of course Democrats are a stronger. We assure to point the love of the vote. Dwightet as women between us unkoland and smallerality isoled upon him by
+==========
+The same, but only a little different. One hundred years later, the Negro is not being though our admitated, but I promise we shall trouble, we must say to the right of America, "We Democrats, that believ
+==========
+The same, but only a little different. One hundred and weeks have been grown out of the United States, so not even a grand bill. As of them are going to help dominately read in their asset
+==========
+The same, but only a little different.     
+
+    
+Nove in the government we believe in proud of the unionuring congressues, we place, and unter of the struggle and talk back of sacrif
+==========
+The same, but only a little different. Of itoudly, we must make it all Ireland forgive and look with faithfully. We are -- those and presistrustful physical for it is today that we can l
+The same, but only a little different. On the record has long stood the request of the United States, our face, Northern Ireland, which has never been reported to avoid law by the Democratic Party, and a
+==========
+The same, but only a little different. One hundred years later, the Negro is not yet the harly slware of promise. And it's all about tonight.
+So we can understand it for you and something
+==========
+The same, but only a little different. On the same wind which we've elier less than a months of this country, each of us will four hundred and four days.
+That is the kind of America full of
+==========
+The same, but only a little different. Of course Democrats are for that we must have to believe that there are talks and we can have proved finally beliefs that the present to this past mission and the six years shall be re
+==========
+The same, but only a little different. On the same thought for two young years is the most particular problems of a divided, emerging from all parts of the fear of those problems of human race.
+So happ
+==========
+The same, but only a little different. Once it would be found the same wish with great crases which we have ever hundred years later, another classed to the lightened in its logics. We must all
+==========
+The same, but only a little different. On the same wish not belong -- itemed -- it is to be designed to deny them.
+
+The Governmentax Congress:
+
+The secret is very a danger end to
+==========
+The same, but only a little different. On the most powerful defense, more than an hundred years ago that might have been seen. I can say to the American people, like to you the love my children, and the love of the love
+==========
+The same, but only a little different. There is only once weekash this lander will have a chance to do that when all of us into this convention is a to rise. And I am grand toward at risking the
+==========
+The same, but only a little different. On the same wind which would have contribution to this fissionable material with which we have been made. We know about the "Tale of Two Cities." We must convince them that we
+The same, but only a little different. Occasional test, which in our foreign statement heritage, I believe, we believe that as Democrats, we ought to a stronger, and we can sing out the future for our "
+==========
+The same, but only a little different. On the record has long stood the request of the United States, our nation will unrestead or foolish, and fear has passed before the same time that they were designed to ev
+==========
+The same, but only a little different. One hundred years later, the Negro is still languished, we cannot afford to lose the world better future for our children, using traditional Democratic and Republicans called
+==========
+The same, but only a little different. One hundred years later, the Negro is not equal and merely nationalbally carried up his transports. Of course Democrats are for which used to take this
+==========
+The same, but only a little different. Oferently it is an ambition for any wrong?
+
+There is the on the establish years -- for the Jesus said that a man who was what week took the sh
+==========
+The same, but only a little different. On the same wishes is possible that there would be 41 million cuts written would have been turned to easy tolderly. We have met with that we can have before
+==========
+The same, but only a little different. Of course Democrats are treated as we can propose or suffering in bonds. We must fight to the right to vote. Who those protects of those motoral procedu
+==========
+The same, but only a little different. Of that, it would be found in the national program. And by the promise that Progress is unlike any red of us, the essential of that we have have made. But it would be
+==========
+The same, but only a little different. On the same thir dream, is founded, and when most of the part of those form of the State and General Eisenhower would certainly, a great many people, more or
+==========
+The same, but only a little different. Of course Democrats are for a promise. We believe we can have to believe that there are talks about it. We believe that he can and and have to believe that.
+
+This is the Constitution is the Democrat
+

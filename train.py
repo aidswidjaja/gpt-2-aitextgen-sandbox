@@ -12,7 +12,7 @@ from aitextgen.utils import GPT2ConfigCPU
 from aitextgen import aitextgen
 
 # The name of the sample size text for training
-file_name = "input.txt"
+file_name = "speeches.txt"
 
 # Train a custom BPE Tokenizer on the downloaded text
 # This will save one file: `aitextgen.tokenizer.json`, which contains the
@@ -36,11 +36,19 @@ data = TokenDataset(file_name, tokenizer_file=tokenizer_file, block_size=64)
 # Train the model! It will save pytorch_model.bin periodically and after completion to the `trained_model` folder.
 ai.train(data, batch_size=8, num_steps=50000, generate_every=5000, save_every=5000)
 
-ai.quantize()
+# Generate text from it!
+ai.generate(10, prompt="The same, but only a little different.")
 
 # With your trained model, you can reload the model at any time by
 # providing the folder containing the pytorch_model.bin model weights + the config, and providing the tokenizer.
 ai2 = aitextgen(model_folder="trained_model",
                 tokenizer_file="aitextgen.tokenizer.json")
 
-ai2.generate(1, prompt="The same, but only a little different.")
+ai2.generate(10, prompt="The same, but only a little different.")
+
+# 3rd version for potatoes
+
+ai3 = aitextgen(model_folder="trained_model",
+                tokenizer_file="aitextgen.tokenizer.json")
+                
+ai2.generate(10, prompt="The same, but only a little different.")
